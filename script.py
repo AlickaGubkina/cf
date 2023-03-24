@@ -46,7 +46,7 @@ message_bytes = js.encode('utf-8')
 base64_bytes = base64.b64encode(message_bytes)
 base64_message = base64_bytes.decode('ascii')
 
-print(js)
+print(base64_message)
 
 d.set_script_timeout(6*1000*60)
 d.execute_script(js)
