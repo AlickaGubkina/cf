@@ -206,7 +206,7 @@ async function createlibs(names){
 }
 
 async function q(login,pass,texts,pberr,pbs,pbe, TOO_MANY_REQUEST_DELAY=7000){
-  debugger;
+  //debugger;
   await Login(login,pass);
   let libs = [new Lib(1)];
   try{libs = await createlibs(texts);}catch{console.log("fall get collections");}
