@@ -14,6 +14,6 @@ jobs:
     - name: Clone Repo
       uses: actions/checkout@v3
     - name: Install web driver
-      run: pip install undetected-chromedriver
+      run: pip install undetected-chromedriver xvfbwrapper
     - name: Parser
       run: python script.py ${{inputs.acc}}
