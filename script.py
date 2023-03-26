@@ -1,5 +1,6 @@
 import undetected_chromedriver as chr
 from selenium.webdriver.chrome.options import Options
+from xvfbwrapper import xvfb
 import sys
 import time
 import base64
@@ -22,7 +23,10 @@ def gethtml(d):
     print(d.page_source)
   except:
     print("unicode symbols!")
-
+    
+vd = xvfb()
+vd.start()
+    
 f = open("1.js", "r", encoding='utf-8')
 js = f.read()
 f.close()
@@ -51,3 +55,5 @@ print(base64_message)
 
 d.set_script_timeout(6*1000*60)
 d.execute_script(js)
+
+vd.stop()
