@@ -12,7 +12,7 @@ def loadarr(path):
     res+='\"'
     res+=w.replace("\n", "")
     res+='\",'
-  res += '\"й и ц\"'
+  res += '\"nigger\"'
   res += ']'
   return res
 
