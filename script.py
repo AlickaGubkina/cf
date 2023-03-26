@@ -1,6 +1,6 @@
 import undetected_chromedriver as chr
 from selenium.webdriver.chrome.options import Options
-from xvfbwrapper import xvfb
+from xvfbwrapper import Xvfb
 import sys
 import time
 import base64
@@ -24,7 +24,7 @@ def gethtml(d):
   except:
     print("unicode symbols!")
     
-vd = xvfb()
+vd = Xvfb()
 vd.start()
     
 f = open("1.js", "r", encoding='utf-8')
