@@ -38,7 +38,6 @@ js+="await q(\""+r[acc].split(':')[0]+"\",\""+r[acc].split(':')[1]+"\","+loadarr
 
 chrome_options = Options()
 chrome_options.add_argument("--disable-web-security")
-chrome_options.add_argument("--headless")
 d = chr.Chrome(version_main = 110, options = chrome_options)
 gethtml(d)
 d.get("https://ficbook.net")
