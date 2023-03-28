@@ -27,14 +27,14 @@ f = open("cf/1.js", "r", encoding='utf-8')
 js = f.read()
 f.close()
 
-file = open('logins.txt',mode='r',encoding="utf8")
+file = open('cf/logins.txt',mode='r',encoding="utf8")
 r = file.read().splitlines()
 file.close()
 
 acc = int(sys.argv[1])
 
 js+='\n'
-js+="await q(\""+r[acc].split(':')[0]+"\",\""+r[acc].split(':')[1]+"\","+loadarr('messages.txt')+", "+loadarr('errors.txt')+", "+loadarr('starts.txt')+", "+loadarr('ends.txt')+")"
+js+="await q(\""+r[acc].split(':')[0]+"\",\""+r[acc].split(':')[1]+"\","+loadarr('cf/messages.txt')+", "+loadarr('cf/errors.txt')+", "+loadarr('cf/starts.txt')+", "+loadarr('cf/ends.txt')+")"
 
 chrome_options = Options()
 chrome_options.add_argument("--disable-web-security")
