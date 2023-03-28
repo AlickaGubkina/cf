@@ -23,7 +23,7 @@ def gethtml(d):
   except:
     print("unicode symbols!")
 
-f = open("1.js", "r", encoding='utf-8')
+f = open("cf/1.js", "r", encoding='utf-8')
 js = f.read()
 f.close()
 
